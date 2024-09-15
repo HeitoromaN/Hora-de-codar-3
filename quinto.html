@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <script>
+        var primeiro = Number(prompt("Olá, me fale um número:"));
+
+        if (isNaN(primeiro)) {
+            alert("Não, cara eu pedi um número.");
+        } else {
+            var segundo = Number(prompt("Agora outro:"));
+
+            if (isNaN(segundo)) {
+                alert("Mano, o segundo valor deve ser um número.");
+            } else if (primeiro >= segundo) {
+                alert("O primeiro número deve ser menor que o segundo.");
+            } else {
+                var soma = 0;
+                var totalNumeros = 0;
+
+                for (var i = primeiro; i <= segundo; i++) {
+                    soma += i;
+                    totalNumeros++;
+                }
+
+                var media = soma / totalNumeros;
+
+                alert("A média aritmética dos números entre " + primeiro + " e " + segundo + " é " + media.toFixed(2) + ".");
+            }
+        }
+    </script>
+</body>
+</html>

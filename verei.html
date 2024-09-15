@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira parte</title>
+</head>
+
+<body>
+    <script>
+        var primeiro_numero = Number(prompt("Meu mano, me fala um numero"))
+        if (isNaN(primeiro_numero)) { alert("Não, cara") }
+        else {
+            alert("Maneiro, segundo número agora")
+            var segundo_numero = Number(prompt("Fala ai um número legal e que não é negativo e nem zero."))
+            if (segundo_numero === 0 || segundo_numero < 0 || isNaN(segundo_numero)) { alert("Achei que com esse cabeção você seria inteligente.") }
+            else {
+                var resultado = (primeiro_numero / segundo_numero)
+                alert("Meu mano, " + primeiro_numero + " dividido por " + segundo_numero + " é " + resultado + ".")
+            }
+        }
+    </script>
+</body>
+
+</html>

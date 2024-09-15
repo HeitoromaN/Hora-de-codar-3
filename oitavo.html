@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Valores Inteiros</title>
+</head>
+<body>
+    <script>
+        function solicitarN() {
+            var N;
+            do {
+                N = parseInt(prompt("Digite um valor para N (maior que ZERO):"), 10);
+                if (isNaN(N) || N <= 0) {
+                    alert("Valor inválido. O valor de N deve ser um número maior que ZERO.");
+                }
+            } while (isNaN(N) || N <= 0);
+            return N;
+        }
+
+        function imprimirValores() {
+            var N = solicitarN();
+            var resultado = "";
+
+            for (var i = 1; i <= N; i++) {
+                resultado += i + " ";
+            }
+
+            alert("Os valores inteiros entre 1 e " + N + " são: " + resultado);
+        }
+
+        imprimirValores();
+    </script>
+</body>
+</html>

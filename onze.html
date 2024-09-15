@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Valores no Intervalo</title>
+</head>
+
+<body>
+    <script>
+        var dentroIntervalo = 0;
+        var foraIntervalo = 0;
+
+        for (var i = 1; i <= 10; i++) {
+            var valor = parseFloat(prompt("Informe o valor " + i + ":"));
+
+            if (isNaN(valor)) {
+                alert("Você deve informar um número. Tente novamente.");
+                i--;
+                continue;
+            }
+
+            if (valor >= 24 && valor <= 42) {
+                dentroIntervalo++;
+            } else {
+                foraIntervalo++;
+            }
+        }
+
+        alert("Quantidade de valores dentro do intervalo [24, 42]: " + dentroIntervalo);
+        alert("Quantidade de valores fora do intervalo [24, 42]: " + foraIntervalo);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de Alunos</title>
+</head>
+<body>
+    <script>
+        var aprovadoCount = 0;
+
+        while (true) {
+            var nota1 = parseFloat(prompt("Digite a primeira nota do aluno:"));
+            var nota2 = parseFloat(prompt("Digite a segunda nota do aluno:"));
+
+            var media = (nota1 + nota2) / 2;
+
+            alert("A média final do aluno é " + media.toFixed(2) + ".");
+
+            if (media >= 9.5) {
+                alert("O aluno foi aprovado!");
+                aprovadoCount++;
+            } else {
+                alert("O aluno não foi aprovado.");
+            }
+
+            var resposta = prompt("Calcular a média de outro aluno? (Sim/Não)").toUpperCase();
+
+            if (resposta !== "SIM") {
+                alert("Quantidade de alunos aprovados: " + aprovadoCount);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
